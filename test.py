@@ -1,7 +1,7 @@
 import unittest
-from chanda import chanda
-
+from chanda import chanda,NORTH,SOUTH,UP,DOWN,EAST,WEST
 class chandrayaanTest(unittest.TestCase):
+
     def test_initial_position(self):
         chandrayaan = chanda(0, 0, 0, "N")
         self.assertEqual(chandrayaan.x, 0)

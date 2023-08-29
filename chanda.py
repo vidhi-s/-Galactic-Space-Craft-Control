@@ -40,6 +40,7 @@ class chanda:
             self.z += 1
         elif self.direction == 'D':
             self.z -= 1
+    
     def move_backward(self):
         if self.direction =="N":
             self.y -= 1
@@ -53,6 +54,7 @@ class chanda:
             self.z -= 1
         elif self.direction =="D":
             self.z += 1
+    
     def turn_left(self):
         rotation_mapping = {
             "N": "W",
@@ -64,6 +66,7 @@ class chanda:
         }
         self.direction = rotation_mapping[self.direction]
 
+    
     def turn_right(self):
         rotation_mapping = {
             "N": "E",
