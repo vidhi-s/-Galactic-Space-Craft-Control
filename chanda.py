@@ -21,8 +21,8 @@ class chanda:
             self.turn_left()
         elif command == "r":
             self.turn_right()
-        # elif command == "u":
-        #     self.turn_up()
+        elif command == "u":
+            self.turn_up()
         # elif command == "d":
         #     self.turn_down()
 
@@ -59,8 +59,8 @@ class chanda:
             "W": "S",
             "S": "E",
             "E": "N",
-            "U": "D",
-            "D": "U"
+            "U": "N",
+            "D": "S"
         }
         self.direction = rotation_mapping[self.direction]
 
@@ -70,10 +70,33 @@ class chanda:
             "E": "S",
             "S": "W",
             "W": "N",
-            "U": "D",
-            "D": "U"
+            "U": "S",
+            "D": "N"
         }
         self.direction = rotation_mapping[self.direction]
+    
+    def turn_up(self):
+        rotation_mapping = {
+            "N": "U",
+            "E": "U",
+            "S": "U",
+            "W": "U",
+            "U": "U",
+            "D": "D"
+        }
+        self.direction = rotation_mapping[self.direction]
+
+    def turn_down(self):
+           rotation_mapping = {
+            "N": "D",
+            "E": "D",
+            "S": "D",
+            "W": "D",
+            "U": "U",
+            "D": "D"
+           }
+           self.direction = rotation_mapping[self.direction]
+
     def get_position(self):
         return self.x, self.y, self.z
 
