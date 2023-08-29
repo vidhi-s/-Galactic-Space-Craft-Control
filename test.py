@@ -8,7 +8,13 @@ class chandrayaanTest(unittest.TestCase):
         self.assertEqual(chandrayaan.y, 0)
         self.assertEqual(chandrayaan.z, 0)
         self.assertEqual(chandrayaan.direction, NORTH)
-    
+   
+
+    def test_move_forward(self):
+        chandrayaan = chanda(0, 0, 0, NORTH)
+        chandrayaan.move_forward()
+        self.assertEqual(chandrayaan.y, 1)
+
 
 
 if __name__ == "__main__":
